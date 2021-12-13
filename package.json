@@ -1,0 +1,19 @@
+{
+  "name": "rdp-cleaner",
+  "version": "1.0.0",
+  "description": "windows rdp client history clear",
+  "main": "src/main.js",
+  "bin": {
+    "app": "./"
+  },
+  "scripts": {
+    "start": "node .",
+    "build" : "pkg ./src/main.js"
+  },
+  "author": "KBH",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "pkg": "^5.5.1"
+  }
+}
