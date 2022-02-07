@@ -1,5 +1,6 @@
 const execSync = require("child_process").execSync;
 const fs = require('fs');
+const os = require('os');
 
 
 
@@ -27,7 +28,7 @@ var delete_rdp_history= subkeys => {
     }
 
     // if default.rdp file is existed in Documents Directory, delete default.rdp file
-    var default_rdp_file_path = "%USERPROFILE%\\Documents\\Default.rdp";
+    var default_rdp_file_path = `${os.homedir()}\\Documents\\Default.rdp`;
     if (fs.existsSync(default_rdp_file_path)) {
         execSync(`DEL /F /Q /A "${default_rdp_file_path}"`);
     }
