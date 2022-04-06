@@ -30,7 +30,7 @@ var delete_rdp_history= subkeys => {
     // if default.rdp file is existed in Documents Directory, delete default.rdp file
     var default_rdp_file_path = `${os.homedir()}\\Documents\\Default.rdp`;
     if (fs.existsSync(default_rdp_file_path)) {
-        execSync(`DEL /F /Q /A "${default_rdp_file_path}"`);
+        fs.unlinkSync(default_rdp_file_path);
     }
     
     
